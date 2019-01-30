@@ -1,0 +1,19 @@
+{
+  "short_name": "first_pwa",
+  "name": "First PWA",
+  "display": "standalone",
+  "theme_color": "#6ca3c7",
+  "background_color": "#6ca3c7",
+  "icons": [
+    {
+      "src": "./icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "./icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ]
+}

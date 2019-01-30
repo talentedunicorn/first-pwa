@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>First PWA</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="style.css" async />
+    <style>
+      :root {
+        --font: sans-serif;
+        --font-size: calc(1rem * 1.2vmax);
+        --black: hsl(0, 0%, 12%);
+        --white: hsl(0, 0%, 96%);
+        --space: 1rem;
+      }
+
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+      }
+
+      body {
+        background: var(--white);
+        color: var(--black);
+        font-family: var(--font);
+        font-size: var(--font-size);
+      }
+
+      img {
+        max-width: 100%;
+        display: inline-block;
+        margin: 0;
+      }
+
+      .App-header,
+      .App-content {
+        padding: var(--space);
+      }
+
+      .App-header h1 {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="App-header"><h1>My first PWA</h1></header>
+    <main class="App-content" id="app"><p>Loading....</p></main>
+
+    <script src="app.js" async></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js').then(function() {
+          console.log('Service worker registered');
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+.App-header {
+  text-align: center;
+}
+
+.App-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
